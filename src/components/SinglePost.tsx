@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Article from "./Article"
 import { Post } from "../lib/types/Post.types"
+import { Link } from "react-router-dom"
 
 export default function SinglePost(){
     
@@ -22,7 +23,7 @@ export default function SinglePost(){
         getPost()
     }, [slug])
     return (<div>
-        <a className="mb-6" href="/">back HOME</a>
+        <Link className="mb-6" to="/">back HOME</Link>
         {post &&  <Article post={post} />}
        
     </div>)

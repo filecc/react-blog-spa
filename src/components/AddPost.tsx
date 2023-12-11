@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,7 +50,7 @@ export default function AddPost(){
     return (<>
          <div className="flex items-center justify-between">
           <h1>Add post</h1>
-          <a href="/dashboard">Dashboard</a>
+          <Link to="/dashboard">Dashboard</Link>
         </div>
 
         <form className="flex flex-col gap-2" onSubmit={handleAdd}> 
