@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import Article from "./Article"
 import { Post } from "../lib/types/Post.types"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 export default function SinglePost(){
-    
-    const slug = window.location.pathname.split('/')[2]
+    const location = useLocation();
+    const slug = location.pathname.split('/')[2]
     const [post, setPost] = useState<Post>()
     
     useEffect(() => {
