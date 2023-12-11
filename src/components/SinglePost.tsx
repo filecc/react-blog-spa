@@ -13,7 +13,6 @@ export default function SinglePost(){
         const getPost = async () => {
             const res = await fetch('http://localhost:4000/api/post/' + slug)
             const result = await res.json()
-            console.log(result)
             if(result.error){
                 window.location.href = '/404'
             } else {

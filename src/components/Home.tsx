@@ -5,6 +5,7 @@ import Article from "./Article"
 export default function Home(){
     const [ posts, setPosts ] = useState<Post[]>([])
     const [ reload, setReload ] = useState(true)
+    
     useEffect(() => {
         if(!reload) return
         const getPosts = async () => {
